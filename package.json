@@ -6,7 +6,9 @@
   "dependencies": {
     "@absolunet/fsp": "^1.6.1",
     "@babel/runtime": "^7.4.5",
+    "jaid-logger": "^1.4.0",
     "lodash": "^4.17.11",
+    "pascal-case": "^2.0.1",
     "yargs": "^13.2.4"
   },
   "devDependencies": {
@@ -20,7 +22,7 @@
     "jest": "^24.8.0",
     "rimraf": "^2.6.3",
     "webpack": "^4.34.0",
-    "webpack-config-jaid": "^5.7.2"
+    "webpack-config-jaid": "^5.8.0"
   },
   "scripts": {
     "clean": "rimraf dist/",
