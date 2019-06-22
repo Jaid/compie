@@ -1,19 +1,19 @@
-import React from "react"
-import PropTypes from "prop-types"
-import classnames from "classnames"
+{{#each imports}}
+import {{import}} from "{{from}}"
+{{/each}}
 
-import css from "./style.scss"
-
-export default class {{name}} extends React.Component {
+export default class {{className}} extends React.Component {
 
   static propTypes = {
-    className: PropTypes.string,
+    {{#each props}}
+    {{propName}}: {{propType}},
+    {{/each}}
   }
 
   render() {
-    return <div className={classnames(css.container, this.props.className)}>
-      {{name}}
-    </div>
+    return <{{wrapperTag}} className={classnames(css.container, this.props.className)}>
+      {{content}}
+    </{{wrapperTag}}>
   }
 
 }

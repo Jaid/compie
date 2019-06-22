@@ -4,9 +4,16 @@ import coffee from "coffee"
 
 const main = path.resolve(process.env.MAIN)
 
-it("should run internal command", () => coffee.fork(main, ["test-component", "--components-folder", "dist/test/components", "--force-pascal"])
+it("should create component", () => coffee.fork(main, ["test-component", "--src-folder", "dist/test"])
   .expect("code", 0)
   .expect("stdout", /created file/i)
-  .expect("stdout", /TestComponent[/\\]index\.js/)
+  .expect("stdout", /components[/\\]TestComponent[/\\]index\.js/)
+  .debug(true)
+  .end())
+
+it("should create page", () => coffee.fork(main, ["user-profile", "--src-folder", "dist/test", "--page"])
+  .expect("code", 0)
+  .expect("stdout", /created file/i)
+  .expect("stdout", /pages[/\\]user-profile[/\\]index\.js/)
   .debug(true)
   .end())
