@@ -33,6 +33,7 @@ const job = async ({srcFolder, name, page}) => {
       {
         propName: "className",
         propType: "PropTypes.oneOfType([\n      PropTypes.string,\n      PropTypes.object,\n      PropTypes.arrayOf(PropTypes.string),\n      PropTypes.arrayOf(PropTypes.object),\n    ])",
+        jsdocType: "*",
       },
     ],
   }
@@ -41,6 +42,7 @@ const job = async ({srcFolder, name, page}) => {
     context.props.push({
       propName: "match",
       propType: "PropTypes.exact({\n      isExact: PropTypes.bool.isRequired,\n      path: PropTypes.string.isRequired,\n      url: PropTypes.string.isRequired,\n      params: PropTypes.object,\n    }).isRequired",
+      jsdocType: "{\n  *    isExact: boolean\n  *    path: string\n  *    url: string\n  *    params: object.<string, string>\n  *  }",
     })
     context.wrapperTag = "main"
     context.folder = path.join(srcFolder, "pages", name)

@@ -2,11 +2,23 @@
 import {{import}} from "{{from}}"
 {{/each}}
 
-export default class {{className}} extends React.Component {
+/**
+  * @typedef \{{
+     {{#each props}}
+  *  {{propName}}: {{jsdocType}}
+     {{/each}}
+  * }} Props
+  */
+
+/**
+  * @class
+  * @extends {React.Component<Props>}
+  */
+class {{className}} extends React.Component {
 
   static propTypes = {
     {{#each props}}
-    {{propName}}: {{propType}},
+    {{propName}}: {{propType}}
     {{/each}}
   }
 
@@ -17,3 +29,5 @@ export default class {{className}} extends React.Component {
   }
 
 }
+
+export default {{className}}
