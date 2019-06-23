@@ -14,7 +14,7 @@ import {{import}} from "{{from}}"
   * @class
   * @extends {React.Component<Props>}
   */
-class {{className}} extends React.Component {
+export default class {{className}} extends React.Component {
 
   static propTypes = {
     {{#each props}}
@@ -29,5 +29,3 @@ class {{className}} extends React.Component {
   }
 
 }
-
-export default {{className}}
