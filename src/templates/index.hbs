@@ -23,8 +23,9 @@ export default class {{className}} extends React.Component {
   }
 
   render() {
+    const content = <span>{{content}}</span>
     return <{{wrapperTag}} className={classnames(css.container, this.props.className)}>
-      {{content}}
+      {content}
     </{{wrapperTag}}>
   }
 
