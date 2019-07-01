@@ -29,13 +29,7 @@ const job = async ({srcFolder, name, page}) => {
         from: "./style.scss",
       },
     ],
-    props: [
-      {
-        propName: "className",
-        propType: "PropTypes.oneOfType([\n      PropTypes.string,\n      PropTypes.object,\n      PropTypes.arrayOf(PropTypes.string),\n      PropTypes.arrayOf(PropTypes.object),\n    ])",
-        jsdocType: "*",
-      },
-    ],
+    props: [],
   }
   if (page) {
     context.className = pascalCase(`${name} page`)
@@ -48,6 +42,11 @@ const job = async ({srcFolder, name, page}) => {
     context.folder = path.join(srcFolder, "pages", name)
     context.content = `Page ${name}`
   } else {
+    context.props.push({
+      propName: "className",
+      propType: "PropTypes.oneOfType([\n      PropTypes.string,\n      PropTypes.object,\n      PropTypes.arrayOf(PropTypes.string),\n      PropTypes.arrayOf(PropTypes.object),\n    ])",
+      jsdocType: "*",
+    })
     context.className = name |> pascalCase
     context.wrapperTag = "div"
     context.folder = path.join(srcFolder, "components", context.className)
