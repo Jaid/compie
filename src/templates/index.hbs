@@ -24,7 +24,13 @@ export default class {{className}} extends React.Component {
 
   render() {
     const content = <span>{{content}}</span>
-    return <{{wrapperTag}} className={classnames(css.container, this.props.className)}>
+    return <{{wrapperTag}} className={
+    {{~#if isPage~}}
+      css.container
+    {{~else~}}
+      classnames(css.container, this.props.className)
+    {{~/if~}}
+      }>
       {content}
     </{{wrapperTag}}>
   }

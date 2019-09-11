@@ -21,10 +21,6 @@ const job = async ({srcFolder, name, page}) => {
         from: "prop-types",
       },
       {
-        import: "classnames",
-        from: "classnames",
-      },
-      {
         import: "css",
         from: "./style.scss",
       },
@@ -32,6 +28,8 @@ const job = async ({srcFolder, name, page}) => {
     props: [],
   }
   if (page) {
+    context.isPage = true
+    context.target = "page"
     context.className = pascalCase(`${name} page`)
     context.props.push({
       propName: "match",
@@ -42,6 +40,11 @@ const job = async ({srcFolder, name, page}) => {
     context.folder = path.join(srcFolder, "pages", name)
     context.content = `Page ${name}`
   } else {
+    context.target = "component"
+    context.imports.push({
+      import: "classnames",
+      from: "classnames",
+    })
     context.props.push({
       propName: "className",
       propType: "PropTypes.oneOfType([\n      PropTypes.string,\n      PropTypes.object,\n      PropTypes.arrayOf(PropTypes.string),\n      PropTypes.arrayOf(PropTypes.object),\n    ])",
