@@ -3,6 +3,15 @@
 
 CLI tool that scaffolds React components.
 
+## Installation
+<a href='https://npmjs.com/package/compie'><img alt='npm logo' src='https://raw.githubusercontent.com/npm/logos/master/npm%20logo/npm-logo-red.png' height=16/></a>
+```bash
+npm install --global compie@^
+```
+<a href='https://yarnpkg.com/package/compie'><img alt='Yarn logo' src='https://raw.githubusercontent.com/yarnpkg/assets/master/yarn-kitten-full.png' height=24/></a>
+```bash
+yarn global add compie@^
+```
 
 
 ## Try it out
