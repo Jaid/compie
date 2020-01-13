@@ -38,5 +38,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "compie",
-  "description": "CLI tool that scaffolds React components."
+  "description": "CLI tool that scaffolds React components.",
+  "funding": "https://github.com/sponsors/jaid"
 }
