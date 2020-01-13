@@ -1,9 +1,9 @@
 # compie
 
 
-<a href="https://raw.githubusercontent.com/Jaid/compie/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/compie?style=flat-square" alt="License"/></a>  
-<a href="https://actions-badge.atrox.dev/Jaid/compie/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fcompie%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/compie/commits"><img src="https://img.shields.io/github/commits-since/Jaid/compie/v2.4.0?style=flat-square&logo=github" alt="Commits since v2.4.0"/></a> <a href="https://github.com/Jaid/compie/commits"><img src="https://img.shields.io/github/last-commit/Jaid/compie?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/compie/issues"><img src="https://img.shields.io/github/issues/Jaid/compie?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/compie"><img src="https://img.shields.io/npm/v/compie?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/compie/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/compie?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/compie"><img src="https://img.shields.io/npm/dm/compie?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/compie/master/license.txt"><img src="https://img.shields.io/github/license/jaid/compie?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor compie"/></a>
+<a href="https://actions-badge.atrox.dev/jaid/compie/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Fcompie%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/compie/commits"><img src="https://img.shields.io/github/commits-since/jaid/compie/v2.4.0?style=flat-square&logo=github" alt="Commits since v2.4.0"/></a> <a href="https://github.com/jaid/compie/commits"><img src="https://img.shields.io/github/last-commit/jaid/compie?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/compie/issues"><img src="https://img.shields.io/github/issues/jaid/compie?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/compie"><img src="https://img.shields.io/npm/v/compie?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/compie/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/compie?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/compie"><img src="https://img.shields.io/npm/dm/compie?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **CLI tool that scaffolds React components.**
 
@@ -33,7 +33,6 @@ yarn global add compie@^2.4.0
 
 
 
-
 ## CLI Usage
 After installing package `compie` globally, you can use its command line interface.
 ```bash
@@ -53,7 +52,7 @@ compie --help
 
 Setting up:
 ```bash
-git clone git@github.com:Jaid/compie.git
+git clone git@github.com:jaid/compie.git
 cd compie
 npm install
 ```
