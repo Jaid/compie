@@ -1,11 +1,11 @@
-import path from "path"
-
-import yargs from "yargs"
-import pascalCase from "pascal-case"
 import fsp from "@absolunet/fsp"
+import jaidLogger from "jaid-logger"
+import pascalCase from "pascal-case"
+import path from "path"
+import yargs from "yargs"
+
 import indexTemplate from "src/templates/index.hbs"
 import styleTemplate from "src/templates/style.hbs"
-import jaidLogger from "jaid-logger"
 
 const logger = jaidLogger(["Jaid", _PKG_TITLE])
 
