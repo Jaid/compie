@@ -5,7 +5,9 @@ import {{import}} from "{{from}}"
 /**
   * @typedef {Object} Props
       {{#each props}}
-  * @prop { {{~jsdocType~}} } {{propName}},
+      {{#if jsdocType}}
+  * @prop { {{~jsdocType~}} } {{propName}}
+      {{/if}}
       {{/each}}
   */
 
@@ -17,7 +19,9 @@ export default class {{className}} extends React.Component {
 
   static propTypes = {
     {{#each props}}
+    {{#if propType}}
     {{propName}}: {{propType}},
+    {{/if}}
     {{/each}}
   }
 

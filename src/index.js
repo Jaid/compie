@@ -33,8 +33,24 @@ const job = async ({srcFolder, name, page}) => {
     context.className = pascalCase(`${name} page`)
     context.props.push({
       propName: "match",
-      propType: "PropTypes.exact({\n      isExact: PropTypes.bool.isRequired,\n      path: PropTypes.string.isRequired,\n      url: PropTypes.string.isRequired,\n      params: PropTypes.object,\n    }).isRequired",
-      jsdocType: "{\n  *    isExact: boolean\n  *    path: string\n  *    url: string\n  *    params: object.<string, string>\n  *  }",
+      propType: "PropTypes.object.isRequired",
+      jsdocType: "Object",
+    })
+    context.props.push({
+      propName: "match.isExact",
+      jsdocType: "boolean",
+    })
+    context.props.push({
+      propName: "match.path",
+      jsdocType: "string",
+    })
+    context.props.push({
+      propName: "match.url",
+      jsdocType: "string",
+    })
+    context.props.push({
+      propName: "match.params",
+      jsdocType: "Object",
     })
     context.wrapperTag = "main"
     context.folder = path.join(srcFolder, "pages", name)
