@@ -47,7 +47,7 @@ const job = async ({srcFolder, name, page}) => {
     })
     context.props.push({
       propName: "className",
-      propType: "PropTypes.oneOfType([\n      PropTypes.string,\n      PropTypes.object,\n      PropTypes.arrayOf(PropTypes.string),\n      PropTypes.arrayOf(PropTypes.object),\n    ])",
+      propType: "PropTypes.any",
       jsdocType: "*",
     })
     context.className = name |> pascalCase
