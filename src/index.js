@@ -1,15 +1,18 @@
 import fsp from "@absolunet/fsp"
 import jaidLogger from "jaid-logger"
+import {sortBy} from "lodash"
 import {pascalCase} from "pascal-case"
 import path from "path"
 import yargs from "yargs"
+
+import getPropTypeFromJsdocType from "lib/getPropTypeFromJsdocType"
 
 import indexTemplate from "src/templates/index.hbs"
 import styleTemplate from "src/templates/style.hbs"
 
 const logger = jaidLogger(["Jaid", _PKG_TITLE])
 
-const job = async ({srcFolder, name, page}) => {
+const job = async ({srcFolder, name, page, prop = []}) => {
   const context = {
     imports: [
       {
@@ -71,6 +74,15 @@ const job = async ({srcFolder, name, page}) => {
     context.folder = path.join(srcFolder, "components", context.className)
     context.content = `Component ${name}`
   }
+  for (const customProp of sortBy(prop)) {
+    const [propName, jsdocType = "*"] = customProp.split(":")
+    const propType = getPropTypeFromJsdocType(jsdocType)
+    context.props.push({
+      propName,
+      jsdocType,
+      propType,
+    })
+  }
   const fileDescriptions = [
     {
       context,
@@ -101,6 +113,9 @@ const builder = {
   page: {
     default: false,
     type: "boolean",
+  },
+  prop: {
+    type: "array",
   },
 }
 yargs.command("$0 <name>", "Creates a React component directory", builder, job).argv

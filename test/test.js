@@ -10,6 +10,11 @@ it("should create component", () => coffee.fork(main, ["test-component", "--src-
   .debug(true)
   .end())
 
+it("should create component with props", () => coffee.fork(main, ["AdvancedTestComponent", "--src-folder", "dist/test", "--prop", "def:number", "--prop", "abc"])
+  .expect("code", 0)
+  .debug(true)
+  .end())
+
 it("should create page", () => coffee.fork(main, ["user-profile", "--src-folder", "dist/test", "--page"])
   .expect("code", 0)
   .expect("stdout", /created file/i)
