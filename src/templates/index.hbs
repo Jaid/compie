@@ -3,11 +3,10 @@ import {{import}} from "{{from}}"
 {{/each}}
 
 /**
-  * @typedef \{{
+  * @typedef {Object} Props
       {{#each props}}
-  *   {{propName}}: {{jsdocType}},
+  * @prop { {{~jsdocType~}} } {{propName}},
       {{/each}}
-  * }} Props
   */
 
 /**

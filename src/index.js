@@ -1,6 +1,6 @@
 import fsp from "@absolunet/fsp"
 import jaidLogger from "jaid-logger"
-import pascalCase from "pascal-case"
+import {pascalCase} from "pascal-case"
 import path from "path"
 import yargs from "yargs"
 
