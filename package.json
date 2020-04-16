@@ -43,5 +43,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/compie"
-  }
+  },
+  "homepage": "https://github.com/Jaid/compie",
+  "keywords": []
 }
