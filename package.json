@@ -44,5 +44,16 @@
     "url": "https://github.com/jaid/compie"
   },
   "homepage": "https://github.com/Jaid/compie",
-  "keywords": []
+  "keywords": [
+    "cli",
+    "components",
+    "react",
+    "react-component",
+    "react-dom",
+    "scaffold",
+    "scaffolding",
+    "tool",
+    "util",
+    "utility"
+  ]
 }
